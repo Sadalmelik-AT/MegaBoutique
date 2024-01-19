@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "64c293208ea28dfbc26e8e95"
+  },
+  "code": "kitch-01",
+  "nom": "mixeur",
+  "prix": 50,
+  "quantite": 0,
+  "image": "/assets/productImg/mixer.jpg",
+  "disponible": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c293408ea28dfbc26e8e98"
+  },
+  "code": "kitch-02",
+  "nom": "air fryer",
+  "prix": 75,
+  "quantite": 0,
+  "image": "/assets/productImg/airfryer.jpg",
+  "disponible": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c293628ea28dfbc26e8e9b"
+  },
+  "code": "kitch-03",
+  "nom": "blender",
+  "prix": 110,
+  "quantite": 0,
+  "image": "/assets/productImg/blender.jpg",
+  "disponible": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c293728ea28dfbc26e8e9e"
+  },
+  "code": "kitch-04",
+  "nom": "boiler",
+  "prix": 20,
+  "quantite": 0,
+  "image": "/assets/productImg/boiler.jpg",
+  "disponible": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c2938b8ea28dfbc26e8ea1"
+  },
+  "code": "kitch-05",
+  "nom": "Coffe Machine",
+  "prix": 150,
+  "quantite": 5,
+  "image": "/assets/productImg/coffemachine.jpg",
+  "disponible": true,
+  "__v": 0
+}]

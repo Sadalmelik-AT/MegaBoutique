@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header') -%>
+    <div class="container">
+        <%- include('layout/nav'); -%>
+        <main class="newProduit">
+            <h1>Formulaire de creation de produit</h1>
+            <% if(errors != null && errors.length > 0){ %>
+                <ul class="errors">
+                <% for (var i = 0; i < errors.length; i++) { %>
+                <li class="error">
+                <%= errors[i] %>
+                </li>
+                <% } %>
+                </ul>
+                <% } %>
+            <form action="/produit/add" method="POSt" enctype="multipart/form-data">
+                <!-- code produit -->
+                <div class="formRow">
+                    <label for="code">code</label>
+                    <input name="code" id="code" type="text" placeholder="Entrer un code de produit..." data-sb-validations="required" />
+                   <!-- <div data-sb-feedback="code:required">Un code de produit est requis.</div> -->
+                </div>
+                <!-- Nom produit -->
+                <div class="formRow">
+                    <label for="nom">Nom du produit</label>
+                    <input name="nom" id="nom" type="text" placeholder="Entrer un nom de produit..." data-sb-validations="required" />
+                    <!--<div data-sb-feedback="nom:required">Un nom requis.</div> -->
+                </div>
+                <!-- prix produit -->
+                <div class="formRow">
+                    <label for="prix">prix</label>
+                    <input name="prix" id="prix" type="text" placeholder="Entrer un prix de produit..." data-sb-validations="required" />
+                    <!--<div data-sb-feedback="prix:required">Un prix requis.</div> -->
+                </div>
+                 <!-- quantite produit 
+                 <div>
+                    <label for="quantite">quantite</label>
+                    <input name="quantite" id="quantite" type="text" placeholder="Entrer un quantite de produit..." data-sb-validations="required" />
+                    <div data-sb-feedback="quantite:required">Un quantite requis.</div> 
+                </div> -->
+                <!-- image produit -->
+                <div class="formRow">
+                    <label for="image">image</label>
+                    <input type="file" id="image" name="image">                
+                    <!--<div data-sb-feedback="image:required">Un image requis.</div> -->
+                </div>
+                <input type="submit" value="creer produit">
+            </form>
+        </main>
+    </div>
+</body>
+</html>

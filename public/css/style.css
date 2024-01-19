@@ -1,0 +1,147 @@
+*,*::before,*::after{
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+
+/* header*/
+header{
+    display: flex;
+    align-items: center;
+}
+header h1,
+header h2{
+    margin: 15px;
+    color:white;
+
+}
+/* Navigation*/
+nav{
+    border: 1px solid white;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    background-color: #fff;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding-top: 15px;
+}
+
+nav ul li{
+    margin: 5px 10px 5px 0;
+}
+nav ul li a,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  text-decoration: none;
+  color: rgb(42, 40, 40);
+
+}
+/* Container*/
+.container{
+    display: flex;
+}
+
+/* home page*/
+main{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.count{
+    background-color: rgb(17, 140, 124);
+    margin-top: 50px;
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    
+}
+/*  formulaire */
+.newProduit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.newProduit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.newProduit form .formRow{
+    margin: 5px 0;
+}
+.newProduit form label{
+    display: block;
+}
+.newProduit form input[type="submit"]{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/*afficher produit*/
+.produits{
+    display: flex;
+    flex-direction: row;
+}
+.produits .produit{
+    border: 1px solid white;
+    margin: 0 20px;
+    color: white;
+    background-color: rgb(17, 140, 124);
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 235px;
+    height: 325px;
+}
+.produits .produit img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+.produits .produit .proprietes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.produits .produit .proprietes .produit-propriete{
+    margin: 5px;
+}
+.produits .produit .proprietes button{
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.errors{
+    
+    list-style-type: none;
+
+}
+.errors .error{
+    color: rgb(102, 3, 3);
+    border: 1px solid rgb(102, 3, 3) ;
+    background-color: #db4e4ec9;
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header') -%>
+   <div class="container">
+    <%- include('layout/nav'); -%>
+    <main class="newProdruit">
+       
+        <h1>retiere un produit de l'inventaire</h1>
+        <div class="container">
+            <div class="produits">
+                <% for (let i = 0; i < Produits.length; i++) { %>
+                    <div class="produit">
+                        <div > <img src="<%= Produits[i].image%>"/> </div>
+                        <div class="proprietes">
+                            <div class="produit-propriete">Code: <%= Produits[i].code %></div>
+                        <div class="produit-propriete">Nom: <%= Produits[i].nom %></div>
+                        <div class="produit-propriete">Prix <%= Produits[i].prix %>$</div>
+                        <div class="produit-propriete">Quantite: <%= Produits[i].quantite %></div>
+                        <div class="produit-propriete"><%= Produits[i].disponible ? "produit disponible" : "produit non disponible"; %> </div>
+                        <button onclick="toggleDisponible('<%= Produits[i]._id %>')">Changer disponibilite</button>
+                        </div>
+                    </div>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+    </main>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+
+
+<script>
+    const toggleDisponible = async (produitId) => {
+        try {
+            // Send a POST request to the server to toggle the 'disponible' property
+            await axios.post(`/produit/stock/retier/${produitId}`);
+            // Refresh the page after the toggle is successful
+            location.reload();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+</script>
+</body>
+</html>

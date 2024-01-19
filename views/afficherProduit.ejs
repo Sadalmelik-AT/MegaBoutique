@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header') -%>
+    <div class="container">
+        <%- include('layout/nav'); -%>
+       <main class="newProdruit">
+        <form action="/produits/find" method="get">
+            <input type="text" id="search" name="search" placeholder="Entrez un nom de produit">
+            <input type="submit" value="rechercher">
+        </form>
+        <div class="produits">
+            <% for (let i = 0; i < Produits.length; i++) { %>
+                <div class="produit">
+                    <div > <img src="<%= Produits[i].image%>"/> </div>
+                    <div class="proprietes">
+                        <div class="produit-propriete">Code: <%= Produits[i].code %></div>
+                    <div class="produit-propriete">Nom: <%= Produits[i].nom %></div>
+                    <div class="produit-propriete">Prix <%= Produits[i].prix %>$</div>
+                    <div class="produit-propriete">Quantite: <%= Produits[i].quantite %></div>
+                    </div>
+                </div>
+                <br>
+            <% } %>
+        </div>
+       </main>
+        
+
+    </div>
+</body>
+</html>
